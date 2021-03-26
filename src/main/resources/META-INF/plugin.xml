@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>com.moushao.LayoutSniffer</id>
+    <name>LayoutSniffer</name>
+    <vendor email="moonshao@gmail.com" url="http://www.moonshao.com">ThoughtWorks</vendor>
+
+    <description><![CDATA[
+    An elegant finder for quickly locating the layout file in your code
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="LayoutSniffer" class="actions.LayoutSniffer" text="LayoutSiniffer"
+                description="Find layout resource like  siniffing green plums">
+            <add-to-group group-id="EditorPopupMenu.GoTo" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift meta P"/>
+        </action>
+    </actions>
+</idea-plugin>
